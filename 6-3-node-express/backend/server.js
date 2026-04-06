@@ -26,3 +26,6 @@ app.get("/api/quote", (req, res) => {
    });
 
 // TODO 7: Start server using app.listen
+app.listen(3000, () => {
+     console.log(`Listening on port 3000...`);
+   });
