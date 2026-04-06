@@ -20,5 +20,9 @@ app.use(morgan("dev"));
    });
 
 // TODO 6.2: Create "/api/quote" route
+app.get("/api/quote", (req, res) => {
+     const quote = getRandomQuote();// i may need to import it first
+     res.send({ quote });// i dont think it is in json
+   });
 
 // TODO 7: Start server using app.listen
