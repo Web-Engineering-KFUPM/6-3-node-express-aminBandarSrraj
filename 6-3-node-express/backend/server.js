@@ -5,18 +5,16 @@ const app = express();
 // TODO 1: Define server port
 const PORT = process.env.PORT || 3000;
 
-
 // TODO 4: Import and Apply CORS middleware
- import middleware from "cors";
-   app.use(middleware);
+import middleware from "cors";
+app.use(middleware);
 
 // TODO 5: Import and apply Morgan middleware
-
+import morgan from "morgan";
+app.use(morgan("dev"));
 
 // TODO 6.1: Create root route "/"
 
-
 // TODO 6.2: Create "/api/quote" route
-
 
 // TODO 7: Start server using app.listen
