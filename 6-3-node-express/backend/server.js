@@ -7,7 +7,8 @@ const PORT = process.env.PORT || 3000;
 
 
 // TODO 4: Import and Apply CORS middleware
-
+ import middleware from "cors";
+   app.use(middleware);
 
 // TODO 5: Import and apply Morgan middleware
 
