@@ -1,3 +1,4 @@
+import { getRandomQuote } from "./quotes.js";
 // TODO 1: Import and Create express app instance
 import express from "express";
 const app = express();
@@ -6,8 +7,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // TODO 4: Import and Apply CORS middleware
-import middleware from "cors";
-app.use(middleware);
+import cors  from "cors";
+app.use(cors );
 
 // TODO 5: Import and apply Morgan middleware
 import morgan from "morgan";
@@ -20,12 +21,13 @@ app.use(morgan("dev"));
    });
 
 // TODO 6.2: Create "/api/quote" route
+
 app.get("/api/quote", (req, res) => {
      const quote = getRandomQuote();// i may need to import it first
      res.send({ quote });// i dont think it is in json
    });
 
 // TODO 7: Start server using app.listen
-app.listen(3000, () => {
-     console.log(`Listening on port 3000...`);
+app.listen(PORT, () => {
+     console.log(`Listening on port ${PORT}...`);
    });
