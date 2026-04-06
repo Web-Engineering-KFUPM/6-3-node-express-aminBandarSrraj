@@ -1,4 +1,5 @@
 import { getRandomQuote } from "./quotes.js";
+import getRandomInt from "./utils/random.js";
 // TODO 1: Import and Create express app instance
 import express from "express";
 const app = express();
@@ -24,7 +25,7 @@ app.use(morgan("dev"));
 
 app.get("/api/quote", (req, res) => {
      const quote = getRandomQuote();// i may need to import it first
-     res.send({ quote });// i dont think it is in json
+     res.json({ quote });// i dont think it is in json
    });
 
 // TODO 7: Start server using app.listen
